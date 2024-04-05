@@ -4,19 +4,15 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col col-md-8">
-      <h1>A pirate's life is for me</h1>
+      <h1>Tales from the seas</h1>
       <p>Hempen halter mizzenmast deadlights gaff pillage starboard jack lee Blimey draught. Man-of-war piracy black jack sutler Yellow Jack keel provost overhaul execution dock rigging. Log quarterdeck dead men tell no tales red ensign gibbet grog blossom bilge Nelsons folly code of conduct gunwalls.</p>
     </div>
-  </div>
-</div>
-<div class="container">
-  <h1>Tales from the seas</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in facilisis velit, aliquam congue dui. Mauris id mi quam. Nam enim leo, bibendum vel efficitur id, elementum malesuada est. Pellentesque interdum tempus eros nec iaculis. Quisque ac est dictum, vehicula nulla quis, condimentum dui.</p>
-  <div class="row">
-    {% for entry in blog.blogs %}
-    <h3><a href="{{ slug.html }}" target="_blank">{{ entry.headline }}</a></h3>
-    <p>{{ entry.date }}</p>
-    {% endfor %}
+    <div class="col col-md-8">
+      {% for entry in blog.blogs %}
+      <h3><a href="blog/{{ entry.slug }}.html" target="_blank">{{ entry.headline }}</a></h3>
+      <p>{{ entry.date }}</p>
+      {% endfor %}
+    </div>
   </div>
 </div>
 {% endblock %}
